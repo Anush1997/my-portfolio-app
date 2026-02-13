@@ -53,8 +53,11 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   openResume() {
-    // Placeholder for resume link
-    window.open('#', '_blank');
+    // Download the resume file
+    const link = document.createElement('a');
+    link.href = 'assets/Udaya_Anushanka_Resume.pdf'; // Update with your actual filename
+    link.download = 'Udaya_Anushanka_Resume.pdf'; // The name for the downloaded file
+    link.click();
   }
 
   scrollToContact() {

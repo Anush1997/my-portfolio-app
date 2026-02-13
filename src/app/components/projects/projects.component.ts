@@ -11,12 +11,28 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Union Bank & CDB Internet Banking',
+      title: 'NDB NOES ',
       description:
-        'Web applications developed for the management of personal transactions for Union Bank and CDB Bank clients. Implemented complex features like calculators, new user registration, and localization.',
+        'Web applications developed for the management of personal transactions for NDB Bank clients. Implemented complex features like new user registration, fund transfer, CRIB, Pawning, Transaction Limit Edit, Settings, Notifications, and localization.',
       technologies: ['Angular', 'Redux', 'NgRx', 'TypeScript', 'SCSS'],
       image: 'assets/banking-project.jpg', // Placeholder
-      link: '#',
+      link: 'https://www.self.lk/',
+    },
+    {
+      title: 'CDB Self ',
+      description:
+        'Web applications developed for the management of personal transactions for CDB Bank clients. Implemented complex features like calculators, and localization.',
+      technologies: ['Angular', 'Redux', 'NgRx', 'TypeScript', 'SCSS'],
+      image: 'assets/banking-project.jpg', // Placeholder
+      link: 'https://www.self.lk/',
+    },
+    {
+      title: 'Union Bank Internet Banking (UBgo)',
+      description:
+        'Web applications developed for the management of personal transactions for Union Bank clients. Implemented complex features like calculators, new user registration, and localization.',
+      technologies: ['Angular', 'Redux', 'NgRx', 'TypeScript', 'SCSS'],
+      image: 'assets/banking-project.jpg', // Placeholder
+      link: 'https://www.ubdirect.com/UNIONIB/login.htm',
     },
     {
       title: 'TourDrive',
