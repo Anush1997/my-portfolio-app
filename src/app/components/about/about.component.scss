@@ -1,0 +1,44 @@
+.about-section {
+  background-color: var(--background-color);
+  
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .about-text {
+      max-width: 800px;
+      text-align: center;
+      
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        
+        strong {
+          color: var(--accent-color);
+        }
+      }
+
+      .personal-details {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .detail-item {
+          background: rgba(255, 255, 255, 0.05);
+          padding: 10px 20px;
+          border-radius: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          
+          .label {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

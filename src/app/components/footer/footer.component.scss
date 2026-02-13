@@ -1,0 +1,33 @@
+footer {
+  background-color: #0b0116; /* Darker than background */
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    
+    .built-with {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+      
+      i {
+        color: #dd0031;
+        margin-left: 5px;
+      }
+    }
+  }
+}

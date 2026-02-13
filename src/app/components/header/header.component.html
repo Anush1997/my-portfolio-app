@@ -1,0 +1,23 @@
+<header [class.scrolled]="isScrolled">
+  <div class="container header-content">
+    <div class="logo">
+      <span class="logo-text">Udaya<span class="dot">.</span></span>
+    </div>
+
+    <nav [class.active]="isMenuOpen">
+      <ul>
+        <li><a (click)="scrollToSection('hero')">Home</a></li>
+        <li><a (click)="scrollToSection('about')">About</a></li>
+        <li><a (click)="scrollToSection('skills')">Skills</a></li>
+        <li><a (click)="scrollToSection('experience')">Experience</a></li>
+        <li><a (click)="scrollToSection('projects')">Projects</a></li>
+        <li><a (click)="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <i class="fas fa-bars" *ngIf="!isMenuOpen"></i>
+      <i class="fas fa-times" *ngIf="isMenuOpen"></i>
+    </div>
+  </div>
+</header>

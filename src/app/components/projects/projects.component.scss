@@ -1,0 +1,90 @@
+.projects-section {
+  background-color: var(--background-color);
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    
+    .project-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-color: var(--primary-color);
+        
+        .project-image .placeholder-overlay {
+          background: linear-gradient(45deg, var(--primary-color), var(--dark-accent));
+        }
+      }
+      
+      .project-image {
+        height: 200px;
+        background: #000;
+        position: relative;
+        
+        .placeholder-overlay {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(45deg, var(--secondary-color), var(--dark-accent));
+          font-size: 3rem;
+          color: rgba(255, 255, 255, 0.2);
+          transition: background 0.3s ease;
+        }
+      }
+      
+      .project-content {
+        padding: 25px;
+        
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+          color: #fff;
+        }
+        
+        p {
+          font-size: 1rem;
+          margin-bottom: 20px;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.6;
+        }
+        
+        .technologies {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 20px;
+          
+          .tech-tag {
+            background: rgba(157, 78, 221, 0.1);
+            color: var(--accent-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+          }
+        }
+        
+        .btn-link {
+          color: var(--primary-color);
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          
+          &:hover {
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
