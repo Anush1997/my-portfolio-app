@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 
@@ -18,6 +18,8 @@ export class ContactComponent {
   name = '';
   userEmail = '';
   message = '';
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   sendMessage() {
     const now = new Date();
@@ -39,13 +41,19 @@ export class ContactComponent {
       time: formattedTime,
     };
 
-    emailjs
-      .send('service_2xi2vzu', 'template_jj7up4q', templateParams, 'kujMxXbwYBrBuqUss')
-      .then(() => {
-        alert('Message sent successfully!');
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (isPlatformBrowser(this.platformId)) {
+      emailjs
+        .send('service_2xi2vzu', 'template_jj7up4q', templateParams, 'kujMxXbwYBrBuqUss')
+        .then(() => {
+          alert('Message sent successfully!');
+          this.name = '';
+          this.userEmail = '';
+          this.message = '';
+        })
+        .catch((error) => {
+          console.error('EmailJS error:', error);
+          alert('Failed to send message. Please check console for details.');
+        });
+    }
   }
 }
