@@ -16,7 +16,7 @@ export class ProjectsComponent {
         'Web applications developed for the management of personal transactions for NDB Bank clients. Implemented complex features like new user registration, fund transfer, CRIB, Pawning, Transaction Limit Edit, Settings, Notifications, and localization.',
       technologies: ['Angular', 'Redux', 'NgRx', 'TypeScript', 'SCSS'],
       image: 'assets/banking-project.jpg', // Placeholder
-      link: 'https://www.self.lk/',
+      link: 'https://neossitib.ndbbank.com/NEOS_IB_SIT/',
     },
     {
       title: 'CDB Self ',
